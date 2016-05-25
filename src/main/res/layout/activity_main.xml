@@ -11,13 +11,20 @@
         android:id="@+id/lv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+
+        android:divider="@null"
+        android:background="@mipmap/miao"
+        android:listSelector="@android:color/transparent">
+        <!--android:transcriptMode="alwaysScroll"-->
+
     </ListView>
     <LinearLayout
         android:id="@+id/lilay"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="40dp"
+        android:background="@mipmap/caodi">
         <EditText
             android:id="@+id/et"
             android:layout_width="0dp"
@@ -25,8 +32,8 @@
             android:layout_weight="1"/>
         <Button
             android:id="@+id/bu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/ic_menu_send"/>
     </LinearLayout>
-
 </LinearLayout>

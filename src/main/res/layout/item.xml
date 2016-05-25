@@ -1,43 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-
     android:layout_height="match_parent">
-    <RelativeLayout
-        android:id="@+id/left"
-        android:layout_width="match_parent"
-        android:layout_height="80dp">
+
         <ImageView
             android:id="@+id/item_iv"
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
-            android:src="@mipmap/zzs"/>
+            android:layout_height="50dp"
+            android:src="@mipmap/gir"/>
         <TextView
             android:id="@+id/item_tv"
             android:layout_width="wrap_content"
             android:layout_toRightOf="@+id/item_iv"
-            android:layout_height="80dp"
+            android:layout_height="50dp"
             android:background="@mipmap/aaa"/>
-    </RelativeLayout>
-    <RelativeLayout
-        android:id="@+id/right"
-        android:layout_width="match_parent"
-        android:layout_height="80dp">
-        <ImageView
-            android:id="@+id/itemr_iv"
-            android:layout_alignParentRight="true"
-            android:layout_width="wrap_content"
-            android:layout_height="80dp"
-            android:src="@mipmap/cad"/>
-        <TextView
-            android:id="@+id/itemr_tv"
-            android:layout_toLeftOf="@+id/itemr_iv"
-            android:layout_width="wrap_content"
-            android:layout_height="80dp"
-            android:background="@mipmap/bbb"
-            />
-    </RelativeLayout>
 
-</LinearLayout>
+
+
+</RelativeLayout>

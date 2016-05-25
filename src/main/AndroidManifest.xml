@@ -7,17 +7,27 @@
     </uses-permission>
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/manliao"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
+            android:windowSoftInputMode="adjustPan"
             android:label="@string/app_name" >
+
+
+        </activity>
+
+
+        <activity
+            android:name=".FirstAty"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 

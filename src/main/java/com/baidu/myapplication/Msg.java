@@ -5,30 +5,25 @@ package com.baidu.myapplication;
  */
 public class Msg {
 
-//    private int LEFT=0;
-//    private int RIGHT=1;
-    private boolean type=false;
+    public static int LEFT=0;
+    public static int RIGHT=1;
+    private int type;
 
 
-    public Msg(boolean type,String content){
+    public Msg(int type,String content){
         this.type=type;
         this.content=content;
     }
 
 
-    public boolean isType() {
+    public int isType() {
         return type;
     }
 
-    public void setType(boolean type) {
-        this.type = type;
-    }
 
-    private String content;
 
-    public void setContent(String content) {
-        this.content = content;
-    }
+    private String content=null;
+
 
     public String getContent() {
         return content;

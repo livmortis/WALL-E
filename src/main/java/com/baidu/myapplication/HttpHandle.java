@@ -2,8 +2,6 @@ package com.baidu.myapplication;
 
 import android.os.AsyncTask;
 
-import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -23,27 +21,30 @@ public class HttpHandle extends AsyncTask<String ,Void,String> {
         this.url=url;
         this.jData=jData;
     }
-
-
     @Override
     protected String doInBackground(String... params) {
         try {
+
             URL uuu = new URL(url);
             HttpURLConnection connection = (HttpURLConnection) uuu.openConnection();
             connection.setConnectTimeout(1000);
             connection.setReadTimeout(1000);
             connection.setRequestMethod("GET");
             InputStream in = connection.getInputStream();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+            BufferedReader br = new BufferedReader(new InputStreamReader(in));
             sb = new StringBuilder();
             String s;
-            while ((s = reader.readLine()) != null) {         //注意StringBuilder的readLine()方法。
+            while ((s = br.readLine()) != null) {         //注意StringBuilder的readLine()方法。
                 sb.append(s);
             }
+
+
+            return sb.toString();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return sb.toString();
+        return  null;
     }
 
     @Override
@@ -54,3 +55,26 @@ public class HttpHandle extends AsyncTask<String ,Void,String> {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
